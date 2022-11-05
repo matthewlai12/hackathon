@@ -1,11 +1,24 @@
 #include <AFMotor.h>
 #include <Dabble.h>
-
 AF_DCMotor left_motor(1);
+
+// bluetooth control code
+#include "SoftwareSerial.h"
+SoftwareSerial serial_connection(10, 11);
+#define BUFFER_SIZE 64;
+char inData[BUFFER_SIZE];
+char inChar=-1;
+int count=0;
+int i=0;
+
+
 
 void setup() {
   // put your setup code here, to run once:
   Dabble.begin(38400);  
+
+  // bluetooth control code
+  SoftwareSerial serial_connection(10, 11);
 
 }
 
