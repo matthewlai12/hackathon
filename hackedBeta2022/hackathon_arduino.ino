@@ -18,7 +18,11 @@ void setup() {
   Dabble.begin(38400);  
 
   // bluetooth control code
-  SoftwareSerial serial_connection(10, 11);
+  Serial.begin(9600);
+  serial_connection.begin(9600);
+  serial_connection.println("Ready!!");
+  Serial.println("Started");
+  
 
 }
 
